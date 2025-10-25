@@ -1,5 +1,5 @@
 function getActivityIdea() {
-    fetch("https://www.boredapi.com/api/activity")
+    fetch("https://bored-api.appbrewery.com/random")
         .then(res => res.json())
         .then(data => {
             document.getElementById("idea").textContent = data.activity
