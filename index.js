@@ -1,10 +1,14 @@
 function getActivityIdea() {
-    fetch("https://apis.scrimba.com/bored/api/activity")
+    fetch("https://www.boredapi.com/api/activity")
         .then(res => res.json())
         .then(data => {
             document.getElementById("idea").textContent = data.activity
             document.body.classList.add("fun")
             document.getElementById("title").textContent = "🦾 HappyBot🦿"
+        })
+        .catch(error => {
+            console.error("Error fetching activity:", error)
+            document.getElementById("idea").textContent = "Sorry, couldn't find an activity right now!"
         })
 }
 
