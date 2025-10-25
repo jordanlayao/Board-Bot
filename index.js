@@ -1,5 +1,5 @@
 function getActivityIdea() {
-    fetch("https://bored-api.appbrewery.com/random")
+    fetch("https://apis.scrimba.com/bored/api/activity")
         .then(res => res.json())
         .then(data => {
             document.getElementById("idea").textContent = data.activity
